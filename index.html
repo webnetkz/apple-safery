@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .allNav {
+            box-sizing: border-box;
+            height: 600px;
+            width: 320px;
+            box-shadow: 0 0 5px rgba(55, 66, 77, 0.4);
+            background-color: rgb(245, 245, 245);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .navP {
+            position: relative;
+            top: -10px;
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            background-color: rgb(194, 50, 61);
+            text-align: center;
+            padding: 15px;
+            font-size: 1.8em;
+            width: 90%;
+            margin-left: 5%;
+            box-shadow: 0 0 15px rgba(55, 66, 77, 0.4);
+        }
+        .navList {
+            color: rgb(83, 83, 83);
+        }
+        .navUl {
+            list-style: none;
+                padding: 0;
+        }
+        .navLink {
+            text-decoration: none;
+            color: inherit;
+            font-size: 1.2em;
+        }
+        .navLi {
+            box-sizing: border-box;
+            width: 80%;
+            margin-left: 10%;
+            padding-left: 10px;
+            padding-bottom: 6px;
+            padding-top: 6px;
+            border-bottom: 1px solid rgba(83, 83, 83, 0.2);
+            font-weight: 600;
+            transition-duration: 900ms;
+        }
+        .navSpan {
+            color:rgb(194, 50, 61);
+        }
+        .navSpanSquad {
+            background-color: rgb(194, 50, 61);
+            line-height: 1em;
+            font-size: 6px;
+            vertical-align: middle;
+        }
+        .navLi:hover {
+            background-color: rgb(206, 206, 206);
+            border-bottom: 1px solid rgba(0, 0, 0, 0);
+        }
+
+        .navHidden {
+            display: none;
+            position: relative;
+        }
+        .navHidden > li {
+            min-width: 170px;
+			float: none;
+			display: list-item;
+			position: relative;
+        }
+
+    </style>
+</head>
+<body style="background-color: rgb(245, 245, 245); padding: 100px 100px;">
+
+
+
+
+
+    
+    <div class="allNav">
+        <p class="navP">НАВИГАЦИЯ</p>
+        <div class="navList">
+            <ul class="navUl">
+                <a href="#" class="navLink" id="services">
+                    <li class="navLi">
+                        <span class="navSpan">&#8250;</span>
+                    УСЛУГИ</li>
+                </a>
+                <ul class="navHidden" id="servicesUl">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+                <a href="#" class="navLink" id="trenings">
+                    <li class="navLi">
+                        <span class="navSpan">&#8250;</span>
+                    ТРЕНИНГИ</li>
+                </a>
+                <ul class="navHidden" id="treningsUl">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+                <a href="https://www.apple-safety.kz/ru/432-galereja.html" class="navLink">
+                    <li class="navLi">
+                        <span class="navSpanSquad">&#160;&#160;&#160;</span>
+                    ГАЛЕРЕЯ
+                    </li>
+                </a>
+                <a href="https://www.apple-safety.kz/ru/news/" class="navLink">
+                    <li class="navLi">
+                        <span class="navSpanSquad">&#160;&#160;&#160;</span>
+                    НОВОСТИ</li>
+                </a>
+                <a href="https://www.apple-safety.kz/ru/about/" class="navLink">
+                    <li class="navLi">
+                        <span class="navSpanSquad">&#160;&#160;&#160;</span>
+                    О НАС</li>
+                </a>
+                <a href="https://www.apple-safety.kz/ru/contacts/" class="navLink">
+                    <li class="navLi">
+                        <span class="navSpanSquad">&#160;&#160;&#160;</span>
+                    КОНТАКТЫ</li>
+                </a>
+                <a href="https://www.apple-safety.kz/ru/900-zakonodatelstvo.html" class="navLink">
+                    <li class="navLi">
+                        <span class="navSpanSquad">&#160;&#160;&#160;</span>
+                    ЗАКОНОДАТЕЛЬСТВО</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let services = document.querySelector('#services');
+        let trenings = document.querySelector('#trenings');
+
+        // Отображение списка сервисов
+        services.addEventListener('click', () => {
+            let servicesUl = document.querySelector('#servicesUl');
+            if(servicesUl.style.display == "block") {
+                servicesUl.style.display = "none";
+            } else {
+                servicesUl.style.display = "block";
+            }
+        });
+
+        // Отображение списка тренингов
+        trenings.addEventListener('click', () => {
+            let treningsUl = document.querySelector('#treningsUl');
+            if(treningsUl.style.display == "block") {
+                treningsUl.style.display = "none";
+            } else {
+                treningsUl.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>
