@@ -9,7 +9,7 @@
     <style>
         .allNav {
             box-sizing: border-box;
-            height: 600px;
+            padding-bottom: 50px;
             width: 320px;
             box-shadow: 0 0 5px rgba(55, 66, 77, 0.4);
             background-color: rgb(245, 245, 245);
@@ -33,12 +33,12 @@
         }
         .navUl {
             list-style: none;
-                padding: 0;
+            padding: 0;
         }
         .navLink {
             text-decoration: none;
             color: inherit;
-            font-size: 1.2em;
+            font-size: 1.1em;
         }
         .navLi {
             box-sizing: border-box;
@@ -51,31 +51,73 @@
             font-weight: 600;
             transition-duration: 900ms;
         }
-        .navSpan {
-            color:rgb(194, 50, 61);
-        }
         .navSpanSquad {
             background-color: rgb(194, 50, 61);
             line-height: 1em;
             font-size: 6px;
             vertical-align: middle;
         }
-        .navLi:hover {
+        li:hover {
             background-color: rgb(206, 206, 206);
             border-bottom: 1px solid rgba(0, 0, 0, 0);
+            cursor: pointer;
         }
 
         .navHidden {
             display: none;
             position: relative;
+            list-style: none;
+            border-left: 1px solid rgb(194, 50, 61);
+            padding-left: 4px;
+            margin-left: 40px;
+        }
+        .navHiddenTwo {
+            display: none;
+            position: absolute;
+            list-style: none;
+            padding-left: 4px;
+            margin-left: 40px;
+            padding-top: 20px;
+            height: 400px;
+            overflow: auto;
+            top: 3em;
+            left: 240px;
+            width: 320px;
+            box-shadow: 0 0 5px rgba(55, 66, 77, 0.4);
+            background-color: rgb(245, 245, 245);
+        }
+        .navLinkTwo {
+            text-decoration: none;
+            color: inherit;
+        }
+        .navLiTwo {
+            box-sizing: border-box;
+            width: 90%;
+            margin-left: 3%;
+            padding-left: 0px;
+            padding-bottom: 6px;
+            padding-top: 6px;
+            border-bottom: 1px solid rgba(83, 83, 83, 0.2);
+            transition-duration: 900ms;
         }
         .navHidden > li {
-            min-width: 170px;
+            padding-right: 10px;
+            transition-duration: 500ms;
 			float: none;
+            margin-top: 3px;
 			display: list-item;
 			position: relative;
+            padding: 4px;
         }
-
+        .navHeader {
+            background-color: rgb(229, 229, 229);
+            padding: 15px;
+            border-left: 4px solid rgb(194, 50, 61);
+        }
+        #atestat::before {
+            content: "Аттестация, обучение и сертификация ";
+            font-weight: 600;
+        }
     </style>
 </head>
 <body style="background-color: rgb(245, 245, 245); padding: 100px 100px;">
@@ -91,17 +133,70 @@
             <ul class="navUl">
                 <a href="#" class="navLink" id="services">
                     <li class="navLi">
-                        <span class="navSpan">&#8250;</span>
+                        <img src="arrowRight.png" alt="arrow" class="arrow">
                     УСЛУГИ</li>
                 </a>
                 <ul class="navHidden" id="servicesUl">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
+                    <li><b>Экспертиза</b> в области промышленной безопасности</li>
+                    <li id="atestat">специалистов по промышленной безопасности, охране труда, пожарной безопасности, электробезопасности и сейсмобезопасности</li>
+                        <ul class="navHiddenTwo" id="atestatUl">
+                            <a href="https://www.apple-safety.kz/509-obuchenije_po_promyshlennoj_bezopasnosti.html" class="navLinkTwo">
+                                <li class="navLiTwo">
+                                    <span class="navSpanSquad">&#160;&#160;&#160;</span>
+                                Промышленная безопастность (допуск)
+                                </li>
+                            </a>
+                            <a href="https://www.apple-safety.kz/477-obuchenije_po_pozharnoj_bezopasnosti_pozharnyj_minimum.html" class="navLinkTwo">
+                                <li class="navLiTwo">
+                                    <span class="navSpanSquad">&#160;&#160;&#160;</span>
+                                Пожарная безопастность (ПТМ)
+                                </li>
+                            </a>
+                            <a href="https://www.apple-safety.kz/476-obuchenije_po_ohrane_truda_i_tehnike_bezopasnosti.html" class="navLinkTwo">
+                                <li class="navLiTwo">
+                                    <span class="navSpanSquad">&#160;&#160;&#160;</span>
+                                Безопастность и охрана труда (сертификат)
+                                </li>
+                            </a>
+                            <a href="https://www.apple-safety.kz/ru/555-elektrobezopasnost.html" class="navLinkTwo">
+                                <li class="navLiTwo">
+                                    <span class="navSpanSquad">&#160;&#160;&#160;</span>
+                                Электробезопастность
+                                </li>
+                            </a>
+                                <p class="navHeader">Обучение/курсы по другим специальностям:</p>
+                            <a href="https://www.apple-safety.kz/ru/580-obuchenije_akkumulatorshhika.html" class="navLinkTwo">
+                                <li class="navLiTwo">
+                                    <span class="navSpanSquad">&#160;&#160;&#160;</span>
+                                    Аккумуляторщик
+                                </li>
+                            </a>
+                            <a href="https://www.apple-safety.kz/ru/583-argonshhik.html" class="navLinkTwo">
+                                <li class="navLiTwo">
+                                    <span class="navSpanSquad">&#160;&#160;&#160;</span>
+                                    Аргонщик
+                                </li>
+                            </a>
+                            <a href="https://www.apple-safety.kz/ru/584-armaturshhik.html" class="navLinkTwo">
+                                <li class="navLiTwo">
+                                    <span class="navSpanSquad">&#160;&#160;&#160;</span>
+                                    Арматурщик
+                                </li>
+                            </a>
+                            <a href="https://www.apple-safety.kz/ru/585-asfaltobetonshhik.html" class="navLinkTwo">
+                                <li class="navLiTwo">
+                                    <span class="navSpanSquad">&#160;&#160;&#160;</span>
+                                    Асфальтобетонщик
+                                </li>
+                            </a>
+                        </ul>
+                    <li><b>Разработка</b> дубликатов паспортов на оборудования и технические устройства</li>
+                    <li><b>Аттестация юридических лиц</b> на право проведения работ в области промышленной безопасности</li>
+                    <li><b>Техническое обслуживание</b> газопотребляющих систем.</li>
                 </ul>
                 <a href="#" class="navLink" id="trenings">
                     <li class="navLi">
-                        <span class="navSpan">&#8250;</span>
+                        <img src="arrowRight.png" alt="arrow" class="arrow">
                     ТРЕНИНГИ</li>
                 </a>
                 <ul class="navHidden" id="treningsUl">
@@ -151,13 +246,16 @@
     <script>
         let services = document.querySelector('#services');
         let trenings = document.querySelector('#trenings');
+        let arrow = document.querySelectorAll('.arrow');
 
-        // Отображение списка сервисов
+        // Отображение списка услуг
         services.addEventListener('click', () => {
             let servicesUl = document.querySelector('#servicesUl');
             if(servicesUl.style.display == "block") {
                 servicesUl.style.display = "none";
+                arrow[0].setAttribute('style', 'transform: rotate(0deg);');
             } else {
+                arrow[0].setAttribute('style', 'transform: rotate(90deg);');
                 servicesUl.style.display = "block";
             }
         });
@@ -167,10 +265,26 @@
             let treningsUl = document.querySelector('#treningsUl');
             if(treningsUl.style.display == "block") {
                 treningsUl.style.display = "none";
+                arrow[1].setAttribute('style', 'transform: rotate(0deg);');
             } else {
                 treningsUl.style.display = "block";
+                arrow[1].setAttribute('style', 'transform: rotate(90deg);');
             }
         });
+
+        ///////////////////////////////////////////////////////
+        // Подсписок Услуг
+
+        let atestat = document.querySelector('#atestat');
+
+        atestat.onmouseover = () => {
+            var atestatUl = document.querySelector('#atestatUl');
+            if(atestatUl.style.display == "block") {
+                atestatUl.style.display = "none";
+            } else {
+                atestatUl.style.display = "block";
+            }
+        }
     </script>
 </body>
 </html>
