@@ -1461,57 +1461,86 @@
 
         ///////////////////////////////////////////////////////
         // Подсписок Услуг
-
         let atestat = document.querySelector('#atestat');
         let kursi = document.querySelector('#kursi');
         let rk = document.querySelector('#rk');
         let spec = document.querySelector('#spec');
 
-        // Услуги второй уровень
-        atestat.onmouseover = () => {
-            var atestatUl = document.querySelector('#atestatUl');
-            if(atestatUl.style.display == "block") {
-                atestatUl.style.display = "none";
+        // Услуги атестация
+        var atestatUl = document.querySelector('#atestatUl');
+        atestat.addEventListener('mouseover', () => {
+            atestatUl.style.display = "block";
+            arrow[1].setAttribute('style', 'transform: rotate(90deg);');
+        });
+        atestatUl.addEventListener('mouseover', () => {
+            atestatUl.style.display = "block";
+            arrow[1].setAttribute('style', 'transform: rotate(90deg);');
+        });
+        atestat.addEventListener('mouseout', () => {
+            atestatUl.style.display = "none";
                 arrow[1].setAttribute('style', 'transform: rotate(0deg);');
-            } else {
-                atestatUl.style.display = "block";
-                arrow[1].setAttribute('style', 'transform: rotate(90deg);');
-            }
-        }
+        });
+        atestatUl.addEventListener('mouseout', () => {
+            atestatUl.style.display = "none";
+                arrow[1].setAttribute('style', 'transform: rotate(0deg);');
+        });
 
-        // Тренинги второй уровень
-        kursi.onmouseover = () => {
-            var kursiUl = document.querySelector('#kursiUl');
-            if(kursiUl.style.display == "block") {
-                kursiUl.style.display = "none";
+        // Тренинги курсы
+        var kursiUl = document.querySelector('#kursiUl');
+        kursi.addEventListener('mouseover', () => {
+            kursiUl.style.display = "block";
+            arrow[3].setAttribute('style', 'transform: rotate(90deg);');
+        });
+        kursiUl.addEventListener('mouseover', () => {
+            kursiUl.style.display = "block";
+            arrow[3].setAttribute('style', 'transform: rotate(90deg);');
+        });
+        kursi.addEventListener('mouseout', () => {
+            kursiUl.style.display = "none";
                 arrow[3].setAttribute('style', 'transform: rotate(0deg);');
-            } else {
-                kursiUl.style.display = "block";
-                arrow[3].setAttribute('style', 'transform: rotate(90deg);');
-            }
-        }
+        });
+        kursiUl.addEventListener('mouseout', () => {
+            kursiUl.style.display = "none";
+            arrow[3].setAttribute('style', 'transform: rotate(0deg);');
+        });
 
-        rk.onmouseover = () => {
-            var rkUl = document.querySelector('#rkUl');
-            if(rkUl.style.display == "block") {
-                rkUl.style.display = "none";
+        // Тренинги РК
+        var rkUl = document.querySelector('#rkUl');
+        rk.addEventListener('mouseover', () => {
+            rkUl.style.display = "block";
+            arrow[4].setAttribute('style', 'transform: rotate(90deg);');
+        });
+        rkUl.addEventListener('mouseover', () => {
+            rkUl.style.display = "block";
+            arrow[4].setAttribute('style', 'transform: rotate(90deg);');
+        });
+        rk.addEventListener('mouseout', () => {
+            rkUl.style.display = "none";
                 arrow[4].setAttribute('style', 'transform: rotate(0deg);');
-            } else {
-                rkUl.style.display = "block";
-                arrow[4].setAttribute('style', 'transform: rotate(90deg);');
-            }
-        }
+        });
+        rkUl.addEventListener('mouseout', () => {
+            rkUl.style.display = "none";
+            arrow[4].setAttribute('style', 'transform: rotate(0deg);');
+        });
 
-        spec.onmouseover = () => {
-            var specUl = document.querySelector('#specUl');
-            if(specUl.style.display == "block") {
-                specUl.style.display = "none";
+        // Тренинги spec
+        var specUl = document.querySelector('#specUl');
+        spec.addEventListener('mouseover', () => {
+            specUl.style.display = "block";
+            arrow[5].setAttribute('style', 'transform: rotate(90deg);');
+        });
+        specUl.addEventListener('mouseover', () => {
+            specUl.style.display = "block";
+            arrow[5].setAttribute('style', 'transform: rotate(90deg);');
+        });
+        spec.addEventListener('mouseout', () => {
+            specUl.style.display = "none";
                 arrow[5].setAttribute('style', 'transform: rotate(0deg);');
-            } else {
-                specUl.style.display = "block";
-                arrow[5].setAttribute('style', 'transform: rotate(90deg);');
-            }
-        }
+        });
+        specUl.addEventListener('mouseout', () => {
+            specUl.style.display = "none";
+            arrow[5].setAttribute('style', 'transform: rotate(0deg);');
+        });
         
     </script>
 </body>
