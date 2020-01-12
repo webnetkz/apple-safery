@@ -1,0 +1,155 @@
+::-webkit-scrollbar {
+    width: 4px;
+    height: 1px;
+}
+::-webkit-scrollbar-track-piece {
+    background:rgb(206, 206, 206);
+}
+::-webkit-scrollbar-thumb:vertical {
+    height: 1px;
+    background:rgb(194, 50, 61);
+}
+::-webkit-scrollbar-thumb:vertical:hover {
+    background:#71CA55;
+}
+
+.allNav {
+position: absolute;
+left: 50px;
+top: 200px;
+box-sizing: border-box;
+padding-bottom: 50px;
+width: 320px;
+box-shadow: 0 0 5px rgba(55, 66, 77, 0.4);
+background-color: rgb(245, 245, 245);
+font-family: Arial, Helvetica, sans-serif;
+transition-duration: 900ms;
+}
+.navP {
+position: relative;
+top: -10px;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+background-color: rgb(194, 50, 61);
+text-align: center;
+padding: 15px;
+font-size: 1.8em;
+width: 90%;
+margin-left: 5%;
+box-shadow: 0 0 15px rgba(55, 66, 77, 0.4);
+}
+.navList {
+color: rgb(83, 83, 83);
+}
+.navUl {
+list-style: none;
+padding: 0;
+}
+.navLink {
+text-decoration: none;
+color: inherit;
+font-size: 1.1em;
+}
+.navLi {
+box-sizing: border-box;
+width: 80%;
+margin-left: 10%;
+padding-left: 10px;
+padding-bottom: 6px;
+padding-top: 6px;
+border-bottom: 1px solid rgba(83, 83, 83, 0.2);
+font-weight: 600;
+transition-duration: 900ms;
+}
+.navSpanSquad {
+background-color: rgb(194, 50, 61);
+line-height: 1em;
+font-size: 6px;
+vertical-align: middle;
+}
+li:hover {
+background-color: rgb(206, 206, 206);
+border-bottom: 1px solid rgba(0, 0, 0, 0);
+cursor: pointer;
+}
+
+.navHidden {
+display: none;
+position: relative;
+list-style: none;
+border-left: 1px solid rgb(194, 50, 61);
+padding-left: 4px;
+margin-left: 40px;
+}
+.navHiddenTwo {
+display: none;
+position: absolute;
+list-style: none;
+padding-left: 4px;
+margin-left: 40px;
+padding-top: 20px;
+height: 400px;
+overflow: auto;
+top: 3em;
+left: 240px;
+width: 320px;
+box-shadow: 0 0 5px rgba(55, 66, 77, 0.4);
+background-color: rgb(245, 245, 245);
+}
+.navLinkTwo {
+text-decoration: none;
+color: inherit;
+}
+.navLiTwo {
+box-sizing: border-box;
+width: 90%;
+margin-left: 3%;
+padding-left: 0px;
+padding-bottom: 6px;
+padding-top: 6px;
+border-bottom: 1px solid rgba(83, 83, 83, 0.2);
+transition-duration: 900ms;
+}
+.navLiTwo:hover {
+background-color: rgb(206, 206, 206);
+color: rgb(194, 50, 61);
+}
+.navHidden > li {
+padding-right: 10px;
+transition-duration: 500ms;
+float: none;
+margin-top: 3px;
+display: list-item;
+position: relative;
+padding: 4px;
+}
+.navHeader {
+background-color: rgb(229, 229, 229);
+padding: 15px;
+border-left: 4px solid rgb(194, 50, 61);
+}
+#atestat::before {
+content: "Аттестация, обучение и сертификация ";
+font-weight: 600;
+}
+.hiddenNav {
+    text-transform: uppercase;
+    position: absolute;
+    top: -60px;
+    left: 60px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(194, 50, 61);
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
+    box-shadow: 0 0 15px rgba(55, 66, 77, 0.4);
+    transition-duration: 800ms;
+}
+.hiddenNav:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(55, 66, 77, 0.8);
+}
+.hiddenNav::before {
+    content: "Скрыть навигацию";
+}
